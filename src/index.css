@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500;700&family=Plus+Jakarta+Sans:wght@200;400;500;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+@layer components {
+  table th {
+    @apply text-[#9CA4AB] font-medium pb-[20px];
+  }
+  table tr p,
+  table tr td {
+    @apply leading-none;
+  }
+
+  .categs > div {
+    @apply relative w-full flex justify-center cursor-pointer outline-none;
+  }
+  .categs > div::after {
+    @apply hidden hover:block;
+  }
+  .categs > div:focus::after {
+    @apply block;
+  }
+}
+
+.amount-bg {
+  background-image: url("./assets/valBg.svg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.categs > div::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  height: 70%;
+  width: 3px;
+  background: #0d062d;
+  border-radius: 30px 0px 0px 30px;
+}
