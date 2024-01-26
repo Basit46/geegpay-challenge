@@ -20,11 +20,15 @@ const Header = () => {
         Dashboard
       </h1>
 
-      <div className="w-[333px] h-[48px] bg-white rounded-[24px] px-[16px]  focus:border-gray-900 outline-none flex items-center gap-[8px] border border-[#DADDDD]">
+      <div
+        className={`${
+          isDarkMode ? "bg-transparent text-white" : "bg-white text-[#A3A3A3]"
+        } w-[333px] h-[48px]  rounded-[24px] px-[16px]  focus:border-gray-900 outline-none flex items-center gap-[8px] border border-[#DADDDD]`}
+      >
         <img className="h-[18px] w-[18px]" src={search} alt="search icon" />
         <input
           tabIndex={1}
-          className="outline-none border-none text-[#A3A3A3]"
+          className="outline-none border-none bg-transparent"
           type="text"
           placeholder="Search..."
         />
