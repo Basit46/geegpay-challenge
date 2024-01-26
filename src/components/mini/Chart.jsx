@@ -1,8 +1,8 @@
 import React from "react";
-import positivechart from "../../assets/+chart.svg";
-import positivearrow from "../../assets/+arrow.svg";
-import negativechart from "../../assets/-chart.svg";
-import negativearrow from "../../assets/-arrow.svg";
+import positivechart from "../../assets/poschart.svg";
+import positivearrow from "../../assets/posarrow.svg";
+import negativechart from "../../assets/negchart.svg";
+import negativearrow from "../../assets/negarrow.svg";
 import { useTheme } from "../../context/ThemeContext";
 
 const Chart = ({ details }) => {
