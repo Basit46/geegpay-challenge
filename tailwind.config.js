@@ -6,6 +6,7 @@ export default {
       screens: {
         vsm: "450px",
         xmd: "900px",
+        imd: "690px",
       },
       fontFamily: {
         Inter: ["Inter", "sans-serif"],

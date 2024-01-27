@@ -13,11 +13,11 @@ const Header = ({ isOpen, setIsOpen }) => {
     <header className="w-full flex items-center px-[20px] py-[18px] border-b border-[#E5EAEF]">
       <span className="flex-1 flex items-center gap-[5px]">
         <img className="block xmd:hidden" src={logo} alt="logo" />
-        <span className="xmd:hidden text-[20px] text-gray-400">/</span>
+        <span className=" xmd:hidden text-[20px] text-gray-400">/</span>
         <h1
           className={`${
             isDarkMode ? "text-white" : "text-[#26282C]"
-          } xmd:flex-1 text-[20px] font-semibold`}
+          }  xmd:flex-1 text-[20px] font-semibold`}
         >
           Dashboard
         </h1>
@@ -28,7 +28,7 @@ const Header = ({ isOpen, setIsOpen }) => {
           isDarkMode
             ? "bg-transparent text-white"
             : "xmd:bg-white text-[#A3A3A3]"
-        } xl:w-[333px] xmd:h-[48px] rounded-[24px] p-[10px] xmd:px-[16px]  focus:border-gray-900 outline-none flex items-center gap-[8px] border border-[#DADDDD]`}
+        } hidden vsm:flex xl:w-[333px] xmd:h-[48px] rounded-[24px] p-[10px] xmd:px-[16px]  focus:border-gray-900 outline-none items-center gap-[8px] border border-[#DADDDD]`}
       >
         <img className="h-[18px] w-[18px]" src={search} alt="search icon" />
         <input
@@ -49,7 +49,7 @@ const Header = ({ isOpen, setIsOpen }) => {
 
       <div
         tabIndex={1}
-        className={`ml-[10px] xmd:ml-[38px] xl:ml-0 mr-[20px] w-[40px] h-[40px] border-[0.69px] border-[#DADDDD] focus:bg-gray-200 outline-none rounded-full grid place-items-center`}
+        className={`hidden vsm:grid ml-[10px] xmd:ml-[38px] xl:ml-0 mr-[20px] w-[40px] h-[40px] border-[0.69px] border-[#DADDDD] focus:bg-gray-200 outline-none rounded-full place-items-center`}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -69,21 +69,21 @@ const Header = ({ isOpen, setIsOpen }) => {
 
       <div
         tabIndex={1}
-        className={` py-[6px] px-[8px] rounded-[28px] border-[0.69px] border-[#DADDDD] focus:bg-gray-200 flex items-center`}
+        className={` py-[6px] px-[8px] rounded-[28px] border-[0.69px] border-[#DADDDD] focus:bg-gray-200 flex gap-[5px] vsm:gap-0 items-center`}
       >
         <img className="w-[38px] h-[38px]" src={pic} alt="user" />
-        <span className="ml-[8px] mr-[12px] font-Inter">
+        <span className="hidden xmd:block ml-[8px] mr-[12px] font-Inter">
           <p
             className={`${
               isDarkMode ? "text-white" : "text-[#26282C]"
-            } hidden xmd:block text-right`}
+            } text-right`}
           >
             Justin Bergson
           </p>
           <p
             className={`${
               isDarkMode ? "text-white/80" : "text-[#787486]"
-            } hidden xmd:block text-right text-[14px]`}
+            } text-right text-[14px]`}
           >
             Justin@gmail.com
           </p>
@@ -104,7 +104,7 @@ const Header = ({ isOpen, setIsOpen }) => {
         </svg>
       </div>
 
-      <button className="xmd:hidden ml-[20px]">
+      <button className="xmd:hidden ml-[10px] vsm:ml-[20px]">
         {isOpen ? (
           <FaTimes
             onClick={() => setIsOpen(false)}

@@ -47,11 +47,12 @@ const ordersData = [
 
 const Orders = () => {
   const { isDarkMode } = useTheme();
+
   return (
     <div
       className={`${
         isDarkMode ? "bg-transparent" : "bg-[white]"
-      } w-full xl:w-[60%] h-[422px] rounded-[14px] border border-[#EDF2F7] px-[20px] pt-[18px]`}
+      }  overflow-x-scroll vsm:overflow-x-auto vsm:max-w-full xl:max-w-[60%] w-full xl:w-[60%] h-[422px] rounded-[14px] border border-[#EDF2F7] p-[10px] vsm:px-[20px] vsm:pt-[18px]`}
     >
       <div className="flex justify-between items-center">
         <p
@@ -69,22 +70,24 @@ const Orders = () => {
         </p>
       </div>
 
-      <table className="mt-[14px] w-full">
-        <thead>
-          <tr>
-            <th align="left">Name</th>
-            <th align="left">Date</th>
-            <th align="left">Amount</th>
-            <th align="left">State</th>
-            <th align="left">Invoice</th>
-          </tr>
-        </thead>
-        <tbody>
-          {ordersData.map((order, index) => (
-            <Order key={index} order={order} />
-          ))}
-        </tbody>
-      </table>
+      <div className="w-[88vw] vsm:max-w-full overflow-x-scroll vsm:w-full vsm:overflow-x-auto">
+        <table className="w-[700px] mt-[14px] vsm:w-full">
+          <thead>
+            <tr>
+              <th align="left">Name</th>
+              <th align="left">Date</th>
+              <th align="left">Amount</th>
+              <th align="left">State</th>
+              <th align="left">Invoice</th>
+            </tr>
+          </thead>
+          <tbody>
+            {ordersData.map((order, index) => (
+              <Order key={index} order={order} />
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };

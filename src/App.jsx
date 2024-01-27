@@ -6,12 +6,12 @@ import { useTheme } from "./context/ThemeContext";
 
 const App = () => {
   const { isDarkMode } = useTheme();
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div
       className={`${isDarkMode ? "bg-black text-white" : "bg-[#fafafa]"} ${
-        isOpen && "h-screen overflow-hidden xmd:h-fit"
+        isOpen && "h-screen overflow-hidden xmd:overflow-auto xmd:h-fit"
       } max-w-[1400px] mx-auto flex`}
     >
       <Navbar />

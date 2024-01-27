@@ -8,7 +8,7 @@ const Platforms = () => {
     <div
       className={`${
         isDarkMode ? "bg-transparent border border-[#EDF2F7]" : "bg-white"
-      } flex-1 rounded-[8px] pl-[20px] pt-[16px] pr-[16px] pb-[32px]`}
+      } flex-1 rounded-[8px] p-[10px] vsm:pl-[20px] vsm:pt-[16px] vsm:pr-[16px] vsm:pb-[32px]`}
     >
       <div className="flex justify-between items-center">
         <p
