@@ -23,6 +23,7 @@ const MobileNavbar = ({ isOpen, setIsOpen }) => {
       <div className="w-fit flex flex-col gap-[15px]">
         <div
           tabIndex={0}
+          onClick={() => setIsOpen(false)}
           className={`${
             isDarkMode ? "after:bg-white" : "after:bg-[#0d062d]"
           } mb-[8px]`}
@@ -31,6 +32,7 @@ const MobileNavbar = ({ isOpen, setIsOpen }) => {
           <p>Category</p>
         </div>
         <div
+          onClick={() => setIsOpen(false)}
           tabIndex={0}
           className={`${isDarkMode ? "after:bg-white" : "after:bg-[#0d062d]"}`}
         >
@@ -38,6 +40,7 @@ const MobileNavbar = ({ isOpen, setIsOpen }) => {
           <p>Trends</p>
         </div>
         <div
+          onClick={() => setIsOpen(false)}
           tabIndex={0}
           className={`${isDarkMode ? "after:bg-white" : "after:bg-[#0d062d]"}`}
         >
@@ -45,6 +48,7 @@ const MobileNavbar = ({ isOpen, setIsOpen }) => {
           <p>Clients</p>
         </div>
         <div
+          onClick={() => setIsOpen(false)}
           tabIndex={0}
           className={`${isDarkMode ? "after:bg-white" : "after:bg-[#0d062d]"}`}
         >
@@ -52,6 +56,7 @@ const MobileNavbar = ({ isOpen, setIsOpen }) => {
           <p>Gifts</p>
         </div>
         <div
+          onClick={() => setIsOpen(false)}
           tabIndex={0}
           className={`${isDarkMode ? "after:bg-white" : "after:bg-[#0d062d]"}`}
         >
@@ -59,6 +64,7 @@ const MobileNavbar = ({ isOpen, setIsOpen }) => {
           <p>Totals</p>
         </div>
         <div
+          onClick={() => setIsOpen(false)}
           tabIndex={0}
           className={`${isDarkMode ? "after:bg-white" : "after:bg-[#0d062d]"}`}
         >
@@ -69,21 +75,24 @@ const MobileNavbar = ({ isOpen, setIsOpen }) => {
 
       <div className="w-fit flex flex-col gap-[15px]">
         <div
-          tabIndex={2}
+          onClick={() => setIsOpen(false)}
+          tabIndex={-1}
           className={`${isDarkMode ? "after:bg-white" : "after:bg-[#0d062d]"}`}
         >
           <ArrowCircleRight2 color="#b2abab" />
           <p>Login</p>
         </div>
         <div
-          tabIndex={2}
+          onClick={() => setIsOpen(false)}
+          tabIndex={-1}
           className={`${isDarkMode ? "after:bg-white" : "after:bg-[#0d062d]"}`}
         >
           <Setting2 color="#b2abab" />
           <p>Settings</p>
         </div>
         <div
-          tabIndex={2}
+          onClick={() => setIsOpen(false)}
+          tabIndex={-1}
           className={`${isDarkMode ? "after:bg-white" : "after:bg-[#0d062d]"}`}
         >
           <Logout color="#b2abab" />
