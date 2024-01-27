@@ -34,8 +34,8 @@ const Chart = ({ details }) => {
         <div
           className={`${
             details.isPositive
-              ? "bg-[#34CAA51F] text-[#34CAA5]"
-              : "bg-[#ED544E1F] text-[#ED544E]"
+              ? "bg-[#0F7C681F] text-[#0F7C68]"
+              : "bg-[#731A181F] text-[#db4542]"
           } flex items-center gap-[4px] px-[8px] py-[4px] rounded-[1000px]  text-[12px] font-medium`}
         >
           <img

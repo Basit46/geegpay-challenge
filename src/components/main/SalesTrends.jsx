@@ -48,7 +48,7 @@ const SalesTrends = () => {
 
         <div className="absolute bottom-[-25px] vsm:bottom-[-42px] imd:bottom-[-25px] left-0 w-full h-[50px] flex items-end gap-[24px]">
           <div className="w-[46px] text-[12px] font-semibold text-[#525252]"></div>
-          <div className="bar-scroll flex-1 w-full overflow-x-auto px-[10px] xmd:px-0">
+          <div className="flex-1 w-full overflow-x-auto px-[10px] vsm:pl-[10px] vsm:pr-[15px]">
             <div className="min-w-[500px] flex items-end justify-between">
               <Trendbar period={"Jan"} value={68} val2="6,000" />
               <Trendbar period={"Feb"} value={120} val2="21,000" />
