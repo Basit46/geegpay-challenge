@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import search from "../../assets/search.svg";
 import pic from "../../assets/user-pic.png";
 import { useTheme } from "../../context/ThemeContext";
@@ -8,6 +8,8 @@ import { FaBars, FaTimes } from "react-icons/fa";
 
 const Header = ({ isOpen, setIsOpen }) => {
   const { isDarkMode } = useTheme();
+
+  const [isProfileOpen, setIsProfileOpen] = useState(false);
 
   return (
     <header className="w-full flex items-center px-[20px] py-[18px] border-b border-[#E5EAEF]">
@@ -69,7 +71,7 @@ const Header = ({ isOpen, setIsOpen }) => {
 
       <div
         tabIndex={0}
-        className={` py-[6px] px-[8px] rounded-[28px] border-[0.69px] border-[#DADDDD] focus:bg-gray-200 flex gap-[5px] vsm:gap-0 items-center`}
+        className={`relative py-[6px] px-[8px] rounded-[28px] border-[0.69px] border-[#DADDDD] focus:bg-gray-200 flex gap-[5px] vsm:gap-0 items-center`}
       >
         <img className="w-[38px] h-[38px]" src={pic} alt="user" />
         <span className="hidden xmd:block ml-[8px] mr-[12px] font-Inter">
@@ -90,6 +92,8 @@ const Header = ({ isOpen, setIsOpen }) => {
         </span>
 
         <svg
+          className={`${isProfileOpen && "rotate-[180deg]"} cursor-pointer `}
+          onClick={() => setIsProfileOpen((prev) => !prev)}
           tabIndex={0}
           xmlns="http://www.w3.org/2000/svg"
           width="20"
@@ -102,6 +106,33 @@ const Header = ({ isOpen, setIsOpen }) => {
             fill={isDarkMode ? "white" : "#0D062D"}
           />
         </svg>
+
+        <div
+          className={`${isProfileOpen ? "flex" : "hidden"} ${
+            isDarkMode ? "bg-black" : "bg-white"
+          } z-[3] absolute top-[110%] right-0 w-[200px] h-fit border-[0.69px] border-[#DADDDD] p-[10px] flex flex-col gap-[5px]`}
+        >
+          <span className="w-full xmd:hidden block font-Inter">
+            <p
+              className={`${
+                isDarkMode ? "text-white" : "text-[#26282C]"
+              } text-right`}
+            >
+              Justin Bergson
+            </p>
+            <p
+              className={`${
+                isDarkMode ? "text-white/80" : "text-[#787486]"
+              } text-right text-[14px]`}
+            >
+              Justin@gmail.com
+            </p>
+          </span>
+
+          <p>Profile</p>
+          <p>Settings</p>
+          <p>Notifications</p>
+        </div>
       </div>
 
       <button
