@@ -10,11 +10,8 @@ import {
 } from "iconsax-react";
 import React from "react";
 import logo from "../../assets/logo.svg";
-import category from "../../assets/category.svg";
-import bright from "../../assets/brightness.svg";
-import moon from "../../assets/moon.svg";
 import { useTheme } from "../../context/ThemeContext";
-// import { CiBrightnessUp } from "react-icons/ci";
+import { BrightSvg, CategIcon, DarkSvg } from "../mini/svgs";
 
 const Navbar = () => {
   const { isDarkMode, toggleDarkMode } = useTheme();
@@ -28,55 +25,85 @@ const Navbar = () => {
       <img src={logo} alt="logo" />
 
       <div className="categs w-full mt-[28px] flex flex-col items-center gap-[32px]">
-        <div tabIndex={1} className="mb-[8px]">
-          <img className="h-[24px] w-[24px]" src={category} alt="icon" />
+        <div
+          tabIndex={1}
+          className={`${
+            isDarkMode ? "after:bg-white" : "after:bg-[#0d062d]"
+          } mb-[8px]`}
+        >
+          <CategIcon isDarkMode={isDarkMode} />
         </div>
-        <div tabIndex={1}>
+        <div
+          tabIndex={1}
+          className={`${isDarkMode ? "after:bg-white" : "after:bg-[#0d062d]"}`}
+        >
           <TrendUp color="#b2abab" />
         </div>
-        <div tabIndex={1}>
+        <div
+          tabIndex={1}
+          className={`${isDarkMode ? "after:bg-white" : "after:bg-[#0d062d]"}`}
+        >
           <Profile2User color="#b2abab" />
         </div>
-        <div tabIndex={1}>
+        <div
+          tabIndex={1}
+          className={`${isDarkMode ? "after:bg-white" : "after:bg-[#0d062d]"}`}
+        >
           <Box color="#b2abab" />
         </div>
-        <div tabIndex={1}>
+        <div
+          tabIndex={1}
+          className={`${isDarkMode ? "after:bg-white" : "after:bg-[#0d062d]"}`}
+        >
           <DiscountShape color="#B2ABAB" />
         </div>
-        <div tabIndex={1}>
+        <div
+          tabIndex={1}
+          className={`${isDarkMode ? "after:bg-white" : "after:bg-[#0d062d]"}`}
+        >
           <InfoCircle color="#b2abab" />
         </div>
       </div>
 
       <div className="mt-[16px] px-[7.5px] py-[6.56px] bg-white rounded-[100px] flex flex-col gap-[16px] items-center">
-        <img
-          onClick={toggleDarkMode}
+        <div
           tabIndex={1}
+          onClick={toggleDarkMode}
           className={`${
             !isDarkMode && "bg-[#34CAA5]"
           }  rounded-full p-[7px] outline-none focus:bg-[#34CAA5] cursor-pointer`}
-          src={bright}
-          alt="icon"
-        />
-        <img
-          onClick={toggleDarkMode}
+        >
+          <BrightSvg isDarkMode={isDarkMode} />
+        </div>
+
+        <div
           tabIndex={1}
+          onClick={toggleDarkMode}
           className={`${
-            isDarkMode && "bg-[#34CAA5] text-white"
-          } outline-none focus:w-[28px] focus:h-[28px] focus:p-[2px] focus:bg-[#34CAA5] rounded-full cursor-pointer`}
-          src={moon}
-          alt="icon"
-        />
+            isDarkMode && "bg-[#34CAA5]"
+          }  rounded-full p-[7px] outline-none focus:bg-[#34CAA5] cursor-pointer`}
+        >
+          <DarkSvg className="text-[1.8px]" isDarkMode={isDarkMode} />
+        </div>
       </div>
 
       <div className="w-full categs flex-1 flex justify-end flex-col items-center gap-[32px] ">
-        <div tabIndex={2}>
+        <div
+          tabIndex={2}
+          className={`${isDarkMode ? "after:bg-white" : "after:bg-[#0d062d]"}`}
+        >
           <ArrowCircleRight2 color="#b2abab" />
         </div>
-        <div tabIndex={2}>
+        <div
+          tabIndex={2}
+          className={`${isDarkMode ? "after:bg-white" : "after:bg-[#0d062d]"}`}
+        >
           <Setting2 color="#b2abab" />
         </div>
-        <div tabIndex={2}>
+        <div
+          tabIndex={2}
+          className={`${isDarkMode ? "after:bg-white" : "after:bg-[#0d062d]"}`}
+        >
           <Logout color="#b2abab" />
         </div>
       </div>

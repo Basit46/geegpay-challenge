@@ -29,11 +29,13 @@ const Platforms = () => {
       <div className="mt-[17px] flex flex-col gap-[20px]">
         <div
           tabIndex={1}
-          className="rounded-[10px] outline-none focus:bg-gray-100 focus:p-[10px] hover:bg-gray-100 group"
+          className="rounded-[10px] outline-none focus:bg-gray-100 p-[10px] hover:bg-gray-100 group"
         >
           <p
             className={`${
-              isDarkMode ? "text-white" : "text-[#22242C]"
+              isDarkMode
+                ? "text-white group-focus:text-black group-hover:text-black"
+                : "text-[#22242C]"
             } text-[18px] font-[600] text-[#22242C]`}
           >
             Book Bazar
@@ -49,11 +51,13 @@ const Platforms = () => {
 
         <div
           tabIndex={1}
-          className="rounded-[10px] outline-none focus:bg-gray-100 focus:p-[10px] hover:bg-gray-100 group"
+          className="rounded-[10px] outline-none focus:bg-gray-100 p-[10px] hover:bg-gray-100 group"
         >
           <p
             className={`${
-              isDarkMode ? "text-white" : "text-[#22242C]"
+              isDarkMode
+                ? "text-white group-focus:text-black group-hover:text-black"
+                : "text-[#22242C]"
             } text-[18px] font-[600] text-[#22242C]`}
           >
             Artisan Aisle
@@ -69,11 +73,13 @@ const Platforms = () => {
 
         <div
           tabIndex={1}
-          className="rounded-[10px] outline-none focus:bg-gray-100 focus:p-[10px] hover:bg-gray-100 group"
+          className="rounded-[10px] outline-none focus:bg-gray-100 p-[10px] hover:bg-gray-100 group"
         >
           <p
             className={`${
-              isDarkMode ? "text-white" : "text-[#22242C]"
+              isDarkMode
+                ? "text-white group-focus:text-black group-hover:text-black"
+                : "text-[#22242C]"
             } text-[18px] font-[600] text-[#22242C]`}
           >
             Toy Troop
@@ -89,11 +95,13 @@ const Platforms = () => {
 
         <div
           tabIndex={1}
-          className="rounded-[10px] outline-none focus:bg-gray-100 focus:p-[10px] hover:bg-gray-100 group"
+          className="rounded-[10px] outline-none focus:bg-gray-100 p-[10px] hover:bg-gray-100 group"
         >
           <p
             className={`${
-              isDarkMode ? "text-white" : "text-[#22242C]"
+              isDarkMode
+                ? "text-white group-focus:text-black group-hover:text-black"
+                : "text-[#22242C]"
             } text-[18px] font-[600] text-[#22242C]`}
           >
             XStore
