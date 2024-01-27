@@ -10,7 +10,7 @@ const Chart = ({ details }) => {
 
   return (
     <div
-      tabIndex={1}
+      tabIndex={0}
       className={`${
         isDarkMode ? "bg-transparent" : "bg-white"
       } w-full sm:w-[48%] h-[220px] xl:h-[48%] flex flex-col justify-between xl:block outline-none focus:bg-gray-100 hover:bg-gray-100 cursor-pointer focus:border-black/10 hover:border-black/10 p-[16px] rounded-[14px] border border-[#EDF2F7]`}

@@ -16,12 +16,12 @@ const SalesTrends = () => {
         <div className="flex items-center gap-[10px]">
           <p className="text-[14px] font-medium">Short by:</p>
           <span
-            tabIndex={1}
+            tabIndex={0}
             className={`flex gap-[10px] items-center rounded-[20px] group border border-[#E1DFDF] py-[6px] px-[12px]`}
           >
             <p className="text-[12px]">Weekly</p>
             <svg
-              tabIndex={1}
+              tabIndex={0}
               xmlns="http://www.w3.org/2000/svg"
               width="20"
               height="20"

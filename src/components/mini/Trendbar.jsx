@@ -9,7 +9,7 @@ const Trendbar = ({ period, value, val2 }) => {
 
   return (
     <div
-      tabIndex={1}
+      tabIndex={0}
       className="relative flex flex-col justify-end h-fit outline-none group"
     >
       <div className="amount-bg absolute top-[-28px] left-[50%] translate-x-[-50%] hidden group-focus:block group-hover:block">

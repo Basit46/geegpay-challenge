@@ -26,7 +26,7 @@ const Navbar = () => {
 
       <div className="categs w-full mt-[28px] flex flex-col items-center gap-[32px]">
         <div
-          tabIndex={1}
+          tabIndex={0}
           className={`${
             isDarkMode ? "after:bg-white" : "after:bg-[#0d062d]"
           } mb-[8px]`}
@@ -34,31 +34,31 @@ const Navbar = () => {
           <CategIcon isDarkMode={isDarkMode} />
         </div>
         <div
-          tabIndex={1}
+          tabIndex={0}
           className={`${isDarkMode ? "after:bg-white" : "after:bg-[#0d062d]"}`}
         >
           <TrendUp color="#b2abab" />
         </div>
         <div
-          tabIndex={1}
+          tabIndex={0}
           className={`${isDarkMode ? "after:bg-white" : "after:bg-[#0d062d]"}`}
         >
           <Profile2User color="#b2abab" />
         </div>
         <div
-          tabIndex={1}
+          tabIndex={0}
           className={`${isDarkMode ? "after:bg-white" : "after:bg-[#0d062d]"}`}
         >
           <Box color="#b2abab" />
         </div>
         <div
-          tabIndex={1}
+          tabIndex={0}
           className={`${isDarkMode ? "after:bg-white" : "after:bg-[#0d062d]"}`}
         >
           <DiscountShape color="#B2ABAB" />
         </div>
         <div
-          tabIndex={1}
+          tabIndex={0}
           className={`${isDarkMode ? "after:bg-white" : "after:bg-[#0d062d]"}`}
         >
           <InfoCircle color="#b2abab" />
@@ -67,21 +67,21 @@ const Navbar = () => {
 
       <div className="mt-[16px] px-[7.5px] py-[6.56px] bg-white rounded-[100px] flex flex-col gap-[16px] items-center">
         <div
-          tabIndex={1}
+          tabIndex={0}
           onClick={toggleDarkMode}
           className={`${
             !isDarkMode && "bg-[#34CAA5]"
-          }  rounded-full p-[7px] outline-none focus:bg-[#34CAA5] cursor-pointer`}
+          }  rounded-full p-[7px] outline-none focus:bg-[red] cursor-pointer`}
         >
           <BrightSvg isDarkMode={isDarkMode} />
         </div>
 
         <div
-          tabIndex={1}
+          tabIndex={0}
           onClick={toggleDarkMode}
           className={`${
             isDarkMode && "bg-[#34CAA5]"
-          }  rounded-full p-[7px] outline-none focus:bg-[#34CAA5] cursor-pointer`}
+          }  rounded-full p-[7px] outline-none focus:bg-[red] cursor-pointer`}
         >
           <DarkSvg className="text-[1.8px]" isDarkMode={isDarkMode} />
         </div>
@@ -89,19 +89,19 @@ const Navbar = () => {
 
       <div className="w-full categs flex-1 flex justify-end flex-col items-center gap-[32px] ">
         <div
-          tabIndex={2}
+          tabIndex={-1}
           className={`${isDarkMode ? "after:bg-white" : "after:bg-[#0d062d]"}`}
         >
           <ArrowCircleRight2 color="#b2abab" />
         </div>
         <div
-          tabIndex={2}
+          tabIndex={-1}
           className={`${isDarkMode ? "after:bg-white" : "after:bg-[#0d062d]"}`}
         >
           <Setting2 color="#b2abab" />
         </div>
         <div
-          tabIndex={2}
+          tabIndex={-1}
           className={`${isDarkMode ? "after:bg-white" : "after:bg-[#0d062d]"}`}
         >
           <Logout color="#b2abab" />

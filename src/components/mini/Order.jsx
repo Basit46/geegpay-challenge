@@ -6,7 +6,7 @@ const Order = ({ order }) => {
   const { isDarkMode } = useTheme();
   return (
     <tr
-      tabIndex={1}
+      tabIndex={0}
       className="border-t border-[#EDF2F6] group focus:bg-gray-100 hover:bg-gray-100 outline-none"
     >
       <td

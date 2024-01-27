@@ -32,7 +32,7 @@ const Header = ({ isOpen, setIsOpen }) => {
       >
         <img className="h-[18px] w-[18px]" src={search} alt="search icon" />
         <input
-          tabIndex={1}
+          tabIndex={0}
           className="hidden xmd:block outline-none border-none bg-transparent"
           type="text"
           placeholder="Search..."
@@ -40,7 +40,7 @@ const Header = ({ isOpen, setIsOpen }) => {
       </div>
 
       <div
-        tabIndex={1}
+        tabIndex={0}
         className="hidden xl:flex ml-[38px] mr-[36px] gap-[10px] p-[8px] focus:rounded-full outline-none focus:bg-gray-200"
       >
         <Calendar size={20} className={`${isDarkMode && "text-white"} `} />
@@ -48,7 +48,7 @@ const Header = ({ isOpen, setIsOpen }) => {
       </div>
 
       <div
-        tabIndex={1}
+        tabIndex={0}
         className={`hidden vsm:grid ml-[10px] xmd:ml-[38px] xl:ml-0 mr-[20px] w-[40px] h-[40px] border-[0.69px] border-[#DADDDD] focus:bg-gray-200 outline-none rounded-full place-items-center`}
       >
         <svg
@@ -68,7 +68,7 @@ const Header = ({ isOpen, setIsOpen }) => {
       </div>
 
       <div
-        tabIndex={1}
+        tabIndex={0}
         className={` py-[6px] px-[8px] rounded-[28px] border-[0.69px] border-[#DADDDD] focus:bg-gray-200 flex gap-[5px] vsm:gap-0 items-center`}
       >
         <img className="w-[38px] h-[38px]" src={pic} alt="user" />
@@ -90,7 +90,7 @@ const Header = ({ isOpen, setIsOpen }) => {
         </span>
 
         <svg
-          tabIndex={1}
+          tabIndex={0}
           xmlns="http://www.w3.org/2000/svg"
           width="20"
           height="20"
@@ -104,7 +104,10 @@ const Header = ({ isOpen, setIsOpen }) => {
         </svg>
       </div>
 
-      <button className="xmd:hidden ml-[10px] vsm:ml-[20px]">
+      <button
+        className="xmd:hidden ml-[10px] vsm:ml-[20px]"
+        aria-label="Navigation bar toggle visibility"
+      >
         {isOpen ? (
           <FaTimes
             onClick={() => setIsOpen(false)}

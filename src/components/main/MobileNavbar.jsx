@@ -22,7 +22,7 @@ const MobileNavbar = ({ isOpen, setIsOpen }) => {
     >
       <div className="w-fit flex flex-col gap-[15px]">
         <div
-          tabIndex={1}
+          tabIndex={0}
           className={`${
             isDarkMode ? "after:bg-white" : "after:bg-[#0d062d]"
           } mb-[8px]`}
@@ -31,35 +31,35 @@ const MobileNavbar = ({ isOpen, setIsOpen }) => {
           <p>Category</p>
         </div>
         <div
-          tabIndex={1}
+          tabIndex={0}
           className={`${isDarkMode ? "after:bg-white" : "after:bg-[#0d062d]"}`}
         >
           <TrendUp color="#b2abab" />
           <p>Trends</p>
         </div>
         <div
-          tabIndex={1}
+          tabIndex={0}
           className={`${isDarkMode ? "after:bg-white" : "after:bg-[#0d062d]"}`}
         >
           <Profile2User color="#b2abab" />
           <p>Clients</p>
         </div>
         <div
-          tabIndex={1}
+          tabIndex={0}
           className={`${isDarkMode ? "after:bg-white" : "after:bg-[#0d062d]"}`}
         >
           <Box color="#b2abab" />
           <p>Gifts</p>
         </div>
         <div
-          tabIndex={1}
+          tabIndex={0}
           className={`${isDarkMode ? "after:bg-white" : "after:bg-[#0d062d]"}`}
         >
           <DiscountShape color="#B2ABAB" />
           <p>Totals</p>
         </div>
         <div
-          tabIndex={1}
+          tabIndex={0}
           className={`${isDarkMode ? "after:bg-white" : "after:bg-[#0d062d]"}`}
         >
           <InfoCircle color="#b2abab" />
@@ -93,7 +93,7 @@ const MobileNavbar = ({ isOpen, setIsOpen }) => {
 
       <div className="absolute top-[20px] right-[30px] w-fit  px-[7.5px] py-[6.56px] bg-white rounded-[100px] flex gap-[16px] items-center">
         <div
-          tabIndex={1}
+          tabIndex={0}
           onClick={toggleDarkMode}
           className={`${
             !isDarkMode && "bg-[#34CAA5]"
@@ -103,7 +103,7 @@ const MobileNavbar = ({ isOpen, setIsOpen }) => {
         </div>
 
         <div
-          tabIndex={1}
+          tabIndex={0}
           onClick={toggleDarkMode}
           className={`${
             isDarkMode && "bg-[#34CAA5]"

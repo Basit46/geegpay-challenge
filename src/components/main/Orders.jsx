@@ -63,7 +63,7 @@ const Orders = () => {
           Last Orders
         </p>
         <p
-          tabIndex={1}
+          tabIndex={0}
           className="text-[#34CAA5] text-[18px] font-medium outline-none focus:text-[red] focus:underline"
         >
           See All

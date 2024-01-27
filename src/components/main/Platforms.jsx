@@ -19,7 +19,7 @@ const Platforms = () => {
           Top Platform
         </p>
         <p
-          tabIndex={1}
+          tabIndex={0}
           className="text-[#34CAA5] text-[18px] font-medium focus:text-[red] focus:underline outline-none cursor-pointer"
         >
           See All
@@ -28,7 +28,7 @@ const Platforms = () => {
 
       <div className="mt-[17px] flex flex-col gap-[20px]">
         <div
-          tabIndex={1}
+          tabIndex={0}
           className="rounded-[10px] outline-none focus:bg-gray-100 p-[10px] hover:bg-gray-100 group"
         >
           <p
@@ -50,7 +50,7 @@ const Platforms = () => {
         </div>
 
         <div
-          tabIndex={1}
+          tabIndex={0}
           className="rounded-[10px] outline-none focus:bg-gray-100 p-[10px] hover:bg-gray-100 group"
         >
           <p
@@ -72,7 +72,7 @@ const Platforms = () => {
         </div>
 
         <div
-          tabIndex={1}
+          tabIndex={0}
           className="rounded-[10px] outline-none focus:bg-gray-100 p-[10px] hover:bg-gray-100 group"
         >
           <p
@@ -94,7 +94,7 @@ const Platforms = () => {
         </div>
 
         <div
-          tabIndex={1}
+          tabIndex={0}
           className="rounded-[10px] outline-none focus:bg-gray-100 p-[10px] hover:bg-gray-100 group"
         >
           <p
