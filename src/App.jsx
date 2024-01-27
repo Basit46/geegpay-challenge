@@ -11,7 +11,7 @@ const App = () => {
   return (
     <div
       className={`${isDarkMode ? "bg-black text-white" : "bg-[#fafafa]"} ${
-        isOpen && "h-screen overflow-hidden"
+        isOpen && "h-screen overflow-hidden xmd:h-fit"
       } max-w-[1400px] mx-auto flex`}
     >
       <Navbar />
