@@ -20,7 +20,7 @@ const Navbar = () => {
     <nav
       className={`${
         isDarkMode ? "bg-transparent" : "bg-[#F7F8FA]"
-      } hidden xmd:flex w-[80px] py-[20px] border-r border-r-[#EBECF2] flex-col items-center`}
+      } hidden xmd:flex w-[80px] py-[20px] pb-[250px] border-r border-r-[#EBECF2] flex-col items-center`}
     >
       <img src={logo} alt="logo" />
 
