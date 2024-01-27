@@ -5,7 +5,7 @@ export default {
     extend: {
       screens: {
         vsm: "450px",
-        xmd: "800px",
+        xmd: "900px",
       },
       fontFamily: {
         Inter: ["Inter", "sans-serif"],

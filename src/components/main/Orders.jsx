@@ -51,7 +51,7 @@ const Orders = () => {
     <div
       className={`${
         isDarkMode ? "bg-transparent" : "bg-[white]"
-      } w-[60%] h-[422px] rounded-[14px] border border-[#EDF2F7] px-[20px] pt-[18px]`}
+      } w-full xl:w-[60%] h-[422px] rounded-[14px] border border-[#EDF2F7] px-[20px] pt-[18px]`}
     >
       <div className="flex justify-between items-center">
         <p

@@ -10,7 +10,7 @@ const SalesTrends = () => {
     <div
       className={`${
         isDarkMode ? "bg-transparent" : "bg-white"
-      } w-[60%] h-[374px] rounded-[14px] border border-[#EDF2F7] px-[20px] pt-[21.5px]`}
+      } w-[100%] xl:w-[60%] h-[374px] rounded-[14px] border border-[#EDF2F7] px-[20px] pt-[21.5px]`}
     >
       <div className="flex items-center justify-between">
         <h1 className="text-[18px] font-semibold">Sales Trends</h1>

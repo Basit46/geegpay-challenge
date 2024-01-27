@@ -9,6 +9,16 @@ body {
 }
 
 @layer components {
+  .mobile-nav > div > div {
+    @apply flex items-center gap-[5px];
+  }
+  .mobile-nav > div > div p {
+    @apply text-[20px] font-semibold;
+  }
+  .mobile-nav > div > div {
+    @apply cursor-pointer;
+  }
+
   table th {
     @apply text-[#9CA4AB] font-medium pb-[20px];
   }

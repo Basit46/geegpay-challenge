@@ -3,29 +3,37 @@ import search from "../../assets/search.svg";
 import pic from "../../assets/user-pic.png";
 import { useTheme } from "../../context/ThemeContext";
 import { Calendar } from "iconsax-react";
+import logo from "../../assets/logo.svg";
+import { FaBars, FaTimes } from "react-icons/fa";
 
-const Header = () => {
+const Header = ({ isOpen, setIsOpen }) => {
   const { isDarkMode } = useTheme();
 
   return (
     <header className="w-full flex items-center px-[20px] py-[18px] border-b border-[#E5EAEF]">
-      <h1
-        className={`${
-          isDarkMode ? "text-white" : "text-[#26282C]"
-        } flex-1 text-[20px] font-semibold`}
-      >
-        Dashboard
-      </h1>
+      <span className="flex-1 flex items-center gap-[5px]">
+        <img className="block xmd:hidden" src={logo} alt="logo" />
+        <span className="xmd:hidden text-[20px] text-gray-400">/</span>
+        <h1
+          className={`${
+            isDarkMode ? "text-white" : "text-[#26282C]"
+          } xmd:flex-1 text-[20px] font-semibold`}
+        >
+          Dashboard
+        </h1>
+      </span>
 
       <div
         className={`${
-          isDarkMode ? "bg-transparent text-white" : "bg-white text-[#A3A3A3]"
-        } w-[333px] h-[48px]  rounded-[24px] px-[16px]  focus:border-gray-900 outline-none flex items-center gap-[8px] border border-[#DADDDD]`}
+          isDarkMode
+            ? "bg-transparent text-white"
+            : "xmd:bg-white text-[#A3A3A3]"
+        } xl:w-[333px] xmd:h-[48px] rounded-[24px] p-[10px] xmd:px-[16px]  focus:border-gray-900 outline-none flex items-center gap-[8px] border border-[#DADDDD]`}
       >
         <img className="h-[18px] w-[18px]" src={search} alt="search icon" />
         <input
           tabIndex={1}
-          className="outline-none border-none bg-transparent"
+          className="hidden xmd:block outline-none border-none bg-transparent"
           type="text"
           placeholder="Search..."
         />
@@ -33,7 +41,7 @@ const Header = () => {
 
       <div
         tabIndex={1}
-        className="ml-[38px] mr-[36px] flex gap-[10px] p-[8px] focus:rounded-full outline-none focus:bg-gray-200"
+        className="hidden xl:flex ml-[38px] mr-[36px] gap-[10px] p-[8px] focus:rounded-full outline-none focus:bg-gray-200"
       >
         <Calendar size={20} className={`${isDarkMode && "text-white"} `} />
         <p className="font-medium font-Inter text-[14px]">November 15, 2023</p>
@@ -41,7 +49,7 @@ const Header = () => {
 
       <div
         tabIndex={1}
-        className={` mr-[20px] w-[40px] h-[40px] border-[0.69px] border-[#DADDDD] focus:bg-gray-200 outline-none rounded-full grid place-items-center`}
+        className={`ml-[10px] xmd:ml-[38px] xl:ml-0 mr-[20px] w-[40px] h-[40px] border-[0.69px] border-[#DADDDD] focus:bg-gray-200 outline-none rounded-full grid place-items-center`}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -68,14 +76,14 @@ const Header = () => {
           <p
             className={`${
               isDarkMode ? "text-white" : "text-[#26282C]"
-            } text-right`}
+            } hidden xmd:block text-right`}
           >
             Justin Bergson
           </p>
           <p
             className={`${
               isDarkMode ? "text-white/80" : "text-[#787486]"
-            } text-right text-[14px]`}
+            } hidden xmd:block text-right text-[14px]`}
           >
             Justin@gmail.com
           </p>
@@ -95,6 +103,20 @@ const Header = () => {
           />
         </svg>
       </div>
+
+      <button className="xmd:hidden ml-[20px]">
+        {isOpen ? (
+          <FaTimes
+            onClick={() => setIsOpen(false)}
+            className="text-[25px] text-[red] cursor-pointer"
+          />
+        ) : (
+          <FaBars
+            onClick={() => setIsOpen(true)}
+            className="text-[25px] text-gray-600 cursor-pointer"
+          />
+        )}
+      </button>
     </header>
   );
 };

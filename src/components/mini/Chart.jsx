@@ -13,7 +13,7 @@ const Chart = ({ details }) => {
       tabIndex={1}
       className={`${
         isDarkMode ? "bg-transparent" : "bg-white"
-      } w-[48%] h-[48%] outline-none focus:bg-gray-100 hover:bg-gray-100 cursor-pointer focus:border-black/10 hover:border-black/10 p-[16px] rounded-[14px] border border-[#EDF2F7]`}
+      } w-full sm:w-[48%] h-[220px] xl:h-[48%] flex flex-col justify-between xl:block outline-none focus:bg-gray-100 hover:bg-gray-100 cursor-pointer focus:border-black/10 hover:border-black/10 p-[16px] rounded-[14px] border border-[#EDF2F7]`}
     >
       <div className="flex justify-between items-center">
         <div className="w-[40px] h-[40px] border-[0.714px] border-[#E6E6E6] rounded-full grid place-items-center">

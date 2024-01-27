@@ -34,7 +34,7 @@ const chartsData = [
 
 const Charts = () => {
   return (
-    <div className="flex-1 flex flex-wrap gap-[2%]">
+    <div className="flex-1 flex flex-wrap justify-between xl:justify-start gap-y-[20px] xl:gap-y-0 xl:gap-[2%]">
       {chartsData.map((data, index) => (
         <Chart key={index} details={data} />
       ))}

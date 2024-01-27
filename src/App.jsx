@@ -1,19 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import MainContent from "./components/main/MainContent";
+import MobileNavbar from "./components/main/MobileNavbar";
 import Navbar from "./components/main/Navbar";
 import { useTheme } from "./context/ThemeContext";
 
 const App = () => {
   const { isDarkMode } = useTheme();
+  const [isOpen, setIsOpen] = useState(true);
 
   return (
     <div
-      className={`${
-        isDarkMode ? "bg-black text-white" : "bg-[#fafafa]"
+      className={`${isDarkMode ? "bg-black text-white" : "bg-[#fafafa]"} ${
+        isOpen && "h-screen overflow-hidden"
       } max-w-[1400px] mx-auto flex`}
     >
       <Navbar />
-      <MainContent />
+      <MobileNavbar isOpen={isOpen} setIsOpen={setIsOpen} />
+      <MainContent isOpen={isOpen} setIsOpen={setIsOpen} />
     </div>
   );
 };
